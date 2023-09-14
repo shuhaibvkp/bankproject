@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+  <table>
+    <tr>
+      <th><label>product name</label></th>
+      <td><input type="text" name="product"></td>
+    </tr>
+    <tr>
+      <th><label>price</label></th>
+      <td><input type="number" name="price"></td>
+    </tr>
+    <tr>
+      <th><label>discription</label></th>
+      <td><input type="text" name="discript"></td>
+    </tr>
+    <tr>
+      <th><label>upload image</label></th>
+      <td><input type="file" name="file"></td>
+    </tr>
+    <tr>
+      <th><button type="submit">submit</button></th>
+    </tr>
+
+
+  </table>
+
+</form>
+
+</body>
+</html>

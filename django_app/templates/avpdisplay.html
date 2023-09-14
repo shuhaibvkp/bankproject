@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+
+        <th>videoname</th>
+        <th>video</th>
+        <th>audioname</th>
+        <th>audio</th>
+        <th>pdfname</th>
+        <th>pdf</th>
+        <th>delete</th>
+        <th>edit</th>
+    </tr>
+    {% for i,j,k,l,m,n in b %}
+    <tr>
+
+         <tr>
+        <td>{{i}}</td>
+        <th>
+            <video controls  >
+                <source  src="{% static j %}">
+            </video>
+        </th>
+    </tr>
+    <tr>
+        <td>{{k}}</td>
+        <th>
+            <audio controls>
+                <source src="{% static l %}">
+            </audio>
+        </th>
+    </tr>
+    <tr>
+        <td>{{m}}</td>
+        <th><a href="{% static n %}" download>download_pdf
+        </th>
+    </tr>
+    <td><a href="http://127.0.0.1:8000/django_app/avpedit/delete/{{i}}" class="btn btn-danger">Delete</a></td>
+        <td><a href="http://127.0.0.1:8000/django_app/avpedit/{{i}}}" class="btn btn-danger">EDIT</a></td>
+
+    {% endfor %}
+    </tr>
+
+
+</table>
+</body>
+</html>

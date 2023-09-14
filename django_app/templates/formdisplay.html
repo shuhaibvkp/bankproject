@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2">
+
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>gender</th>
+        <th>dob</th>
+        <th>state</th>
+        <th>English</th>
+        <th>Malayalam</th>
+        <th>Hindi</th>
+        <th>Delete</th>
+        <th>EDIT</th>
+
+    </tr>
+
+    {% for i in c %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.firstname}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.state}}</td>
+        <td>{{i.eng}}</td>
+        <td>{{i.mal}}</td>
+        <td>{{i.hind}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

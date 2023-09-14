@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>upload video audio pdf</h1>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <table>
+        <tr>
+            <th><label>upload video</label></th>
+            <td><input type="text" name="videoname" placeholder="video_name"></td>
+            <td><input type="file" name="video"></td>
+        </tr>
+        <tr>
+            <th><label>upload audio</label></th>
+            <td><input type="text" name="audioname" placeholder="audio_name"></td>
+            <td><input type="file" name="audio"></td>
+        </tr>
+        <tr>
+            <th><label>upload pdf</label></th>
+            <td><input type="text" name="pdfname" placeholder="pdf_name"></td>
+            <td><input type="file" name="pdf"></td>
+        </tr>
+        <tr>
+            <th><button type="submit">submit</button></th>
+        </tr>
+    </table>
+
+
+</form>
+</body>
+</html>

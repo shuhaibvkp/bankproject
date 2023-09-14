@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body bgcolor="#134d00">
+    <h1><font color="red">Registration form</font></h1>
+    <form  method="post">{% csrf_token %}
+        <label >name</label>
+        <input  type="text" name="firstname" placeholder="enter name"><br><br>
+
+
+        <label>gender</label>
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender">female
+        <input type="radio" name="gender">other<br><br>
+
+        <label>check box</label><br>
+        <input type="checkbox" name="eng">english
+        <input type="checkbox" name="mal">malayalam
+        <input type="checkbox" name="hind">hindi<br><br>
+        <label>DOB</label>
+        <input type="date" name="date"><br><br>
+
+        <label>states</label>
+        <select name="state">
+            <option>--select state--</option>
+            <option value="kerala">kerala</option>
+            <option value="tamilnadu">tamilnadu</option>
+            <option value="karnataka">karnataka  </option>
+
+        </select><br><br>
+
+        <input type="submit">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>

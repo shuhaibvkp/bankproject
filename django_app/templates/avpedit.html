@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>upload video audio pdf</h1>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <div class="mb-3">
+        <input class="form-control" type="text" name="videoname" value="">
+        <video controls height="200ox" width="200px">
+            <source src="{% static vid %}">
+        </video>
+        <input type="file" name="video">
+
+          <input class="form-control" type="text" name="audioname" value="">
+        <audio controls >
+            <source src="{% static aud %}">
+        </audio>
+            <input type="file" name="audio">
+
+          <input class="form-control" type="text" name="pdfname" value="">
+        <a href="{% static pdf %}"></a>
+        <input type="file" name="pdf">
+        <input type="submit">
+
+    </div>
+
+</body>
+</html>
